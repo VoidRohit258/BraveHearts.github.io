@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/contriheader.css">
+    <link rel="stylesheet" href="css/contri.css">
+    <title>Contribute</title>
+    
+</head>
+<body>
+    <header class="header">
+		<h1 class="logo"><a href="#">Brave Hearts</a></h1>
+      <ul class="main-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="contribute.html">Contribute</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="anthem.html">Anthem</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="register.html">Login</a></li>
+      </ul>
+    </header> 
+    <script>
+      function verifyPassword() {  
+     var pw = document.getElementById("amnt").value;  
+    
+     if(pw.value > 1500000) {  
+        document.getElementById("message").innerHTML = "You cannot Contribute more than 15,00,000 At a Time";  
+        return false;  
+     }  
+     if(pw.lenght < 8){
+      document.getElementById("message").innerHTML = "Password is incorrect";  
+        return false;
+     }
+     else {  
+        alert("You Donated %s succefully",pw);  
+     }  
+   } 
+     </script>  
+    <div class="wrapper">
+      <div class="title-text">
+        <div class="title login">
+"Contribute for Good"
+</div>
+</div>
+<div class="form-container">
+        <div class="slide-controls">
+          <input type="radio" name="slide" id="login" checked>
+          <label for="login" class="slide login">Contribute</label>
+          <div class="slider-tab">
+</div>
+</div>
+<div class="form-inner">
+          <form class="login" onsubmit="return verifyPassword()">
+
+            <div class="field">
+              <input id="amnt"  placeholder="Enter Amount" required="" type="number">
+            </div>
+<div class="field">
+              <input id="pswd"  type="password" placeholder="Enter Password" required>
+            </div>
+            <span id = "message" style="color:red"> </span><br>
+
+<div class="field btn">
+              <div class="btn-layer">
+</div>
+<input type="submit" value="Contribute">
+            </div>
+
+</form>
+        <form class="signup" onsubmit="return verifysPassword()" >
+  <div class="field">
+    <input  placeholder="Full Name" required="" type="text">
+  </div>
+            <div class="field">
+              <input placeholder="Email Address" required="" type="email" >
+            </div>
+<div class="field">
+              <input id="psd" type="password" placeholder="Password" required>
+            </div>
+            <span id = "message" style="color:red"> </span><br>
+<div class="field btn">
+              <div class="btn-layer">
+</div>
+<input type="submit" value="Signup">
+            </div>
+</form>
+</div>
+</div>
+</div>
+
+   
+    
+</body>
+</html>
